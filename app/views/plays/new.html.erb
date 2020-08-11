@@ -1,0 +1,12 @@
+<h1> Add Instruments</h1>
+
+<%= form_for @play do |f| %>
+
+
+<%= f.label "Select an Artist" %>
+<%= f.collection_select :artist_id, Artist.all, :id, :name %>
+<%= f.label "Select an Instrument" %>
+<%= f.collection_select :instrument_id, Instrument.all, :id, :name %>
+
+<%= f.submit %>
+<%end%>
